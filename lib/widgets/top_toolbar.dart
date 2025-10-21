@@ -1,7 +1,7 @@
 // lib/widgets/top_toolbar.dart
 
+import 'package:figma_editor/state/app_state.dart';
 import 'package:flutter/material.dart';
-import 'package:planogram_generator/state/app_state.dart';
 import 'package:provider/provider.dart';
 import '../models/models.dart';
 import 'common_widgets.dart';

@@ -1,7 +1,7 @@
 // lib/screens/figma_editor_screen.dart
 
+import 'package:figma_editor/state/app_state.dart';
 import 'package:flutter/material.dart';
-import 'package:planogram_generator/state/app_state.dart';
 import 'package:provider/provider.dart';
 import '../widgets/top_toolbar.dart';
 import '../widgets/left_sidebar.dart';

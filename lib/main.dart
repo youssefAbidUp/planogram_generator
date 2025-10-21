@@ -1,8 +1,8 @@
 // lib/main.dart
 
+import 'package:figma_editor/screens/figma_editor.dart';
+import 'package:figma_editor/state/app_state.dart';
 import 'package:flutter/material.dart';
-import 'package:planogram_generator/state/app_state.dart';
-import 'package:planogram_generator/screens/figma_editor.dart';
 import 'package:provider/provider.dart';
 import 'models/models.dart';
 

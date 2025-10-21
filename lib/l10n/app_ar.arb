@@ -1,0 +1,69 @@
+{
+  "@@locale": "ar",
+  
+  "appTitle": "محرر فيجما",
+  
+  "file": "ملف",
+  "assets": "الأصول",
+  "design": "التصميم",
+  "prototype": "النموذج الأولي",
+  "layers": "الطبقات",
+
+  "move": "تحريك",
+  "frame": "إطار",
+  "rectangle": "مستطيل",
+  "ellipse": "قطع ناقص",
+  "text": "نص",
+  "hand": "يد",
+  "polygon": "مضلع",
+  "pen": "قلم",
+  "comment": "تعليق",
+
+  "copy": "نسخ",
+  "paste": "لصق",
+  "cut": "قص",
+  "duplicate": "تكرار",
+  "delete": "حذف",
+  "selectAll": "تحديد الكل",
+
+  "zoomIn": "تكبير",
+  "zoomOut": "تصغير",
+  "resetView": "إعادة تعيين العرض",
+  "showGrid": "إظهار الشبكة",
+  "hideGrid": "إخفاء الشبكة",
+  "showRulers": "إظهار المساطر",
+  "hideRulers": "إخفاء المساطر",
+
+  "rename": "إعادة تسمية",
+  "share": "مشاركة",
+  "export": "تصدير",
+  "settings": "الإعدادات",
+
+  "noElementsYet": "لا توجد عناصر بعد",
+  "createElementsOnCanvas": "إنشاء عناصر على اللوحة",
+  "noAssetsYet": "لا توجد أصول بعد",
+
+  "locked": "مقفل",
+  "unlocked": "غير مقفل",
+  "visible": "مرئي",
+  "hidden": "مخفي",
+
+  "fillColor": "لون التعبئة",
+  "strokeColor": "لون الحدود",
+  "strokeWeight": "سمك الحدود",
+  "cornerRadius": "نصف قطر الزاوية",
+  "opacity": "الشفافية",
+
+  "position": "الموضع",
+  "size": "الحجم",
+  "rotation": "الدوران",
+
+  "fontSize": "حجم الخط",
+  "fontFamily": "عائلة الخط",
+  "textAlign": "محاذاة النص",
+
+  "exportSettings": "إعدادات التصدير",
+  "addExportSetting": "إضافة إعداد تصدير",
+  "scale": "المقياس",
+  "format": "التنسيق"
+}

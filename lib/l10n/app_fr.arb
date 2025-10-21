@@ -1,0 +1,69 @@
+{
+  "@@locale": "fr",
+  
+  "appTitle": "Éditeur Figma",
+  
+  "file": "Fichier",
+  "assets": "Ressources",
+  "design": "Design",
+  "prototype": "Prototype",
+  "layers": "Calques",
+
+  "move": "Déplacer",
+  "frame": "Cadre",
+  "rectangle": "Rectangle",
+  "ellipse": "Ellipse",
+  "text": "Texte",
+  "hand": "Main",
+  "polygon": "Polygone",
+  "pen": "Plume",
+  "comment": "Commentaire",
+
+  "copy": "Copier",
+  "paste": "Coller",
+  "cut": "Couper",
+  "duplicate": "Dupliquer",
+  "delete": "Supprimer",
+  "selectAll": "Tout sélectionner",
+
+  "zoomIn": "Zoomer",
+  "zoomOut": "Dézoomer",
+  "resetView": "Réinitialiser la vue",
+  "showGrid": "Afficher la grille",
+  "hideGrid": "Masquer la grille",
+  "showRulers": "Afficher les règles",
+  "hideRulers": "Masquer les règles",
+
+  "rename": "Renommer",
+  "share": "Partager",
+  "export": "Exporter",
+  "settings": "Paramètres",
+
+  "noElementsYet": "Aucun élément pour l'instant",
+  "createElementsOnCanvas": "Créer des éléments sur le canevas",
+  "noAssetsYet": "Aucune ressource pour l'instant",
+
+  "locked": "Verrouillé",
+  "unlocked": "Déverrouillé",
+  "visible": "Visible",
+  "hidden": "Masqué",
+
+  "fillColor": "Couleur de remplissage",
+  "strokeColor": "Couleur de contour",
+  "strokeWeight": "Épaisseur du contour",
+  "cornerRadius": "Rayon des coins",
+  "opacity": "Opacité",
+
+  "position": "Position",
+  "size": "Taille",
+  "rotation": "Rotation",
+
+  "fontSize": "Taille de police",
+  "fontFamily": "Famille de police",
+  "textAlign": "Alignement du texte",
+
+  "exportSettings": "Paramètres d'exportation",
+  "addExportSetting": "Ajouter un paramètre d'exportation",
+  "scale": "Échelle",
+  "format": "Format"
+}

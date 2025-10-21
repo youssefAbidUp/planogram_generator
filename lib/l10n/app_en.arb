@@ -1,0 +1,72 @@
+{
+  "@@locale": "en",
+  
+  "appTitle": "Figma Editor",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+
+  "file": "File",
+  "assets": "Assets",
+  "design": "Design",
+  "prototype": "Prototype",
+  "layers": "Layers",
+
+  "move": "Move",
+  "frame": "Frame",
+  "rectangle": "Rectangle",
+  "ellipse": "Ellipse",
+  "text": "Text",
+  "hand": "Hand",
+  "polygon": "Polygon",
+  "pen": "Pen",
+  "comment": "Comment",
+
+  "copy": "Copy",
+  "paste": "Paste",
+  "cut": "Cut",
+  "duplicate": "Duplicate",
+  "delete": "Delete",
+  "selectAll": "Select All",
+
+  "zoomIn": "Zoom In",
+  "zoomOut": "Zoom Out",
+  "resetView": "Reset View",
+  "showGrid": "Show Grid",
+  "hideGrid": "Hide Grid",
+  "showRulers": "Show Rulers",
+  "hideRulers": "Hide Rulers",
+
+  "rename": "Rename",
+  "share": "Share",
+  "export": "Export",
+  "settings": "Settings",
+
+  "noElementsYet": "No elements yet",
+  "createElementsOnCanvas": "Create elements on canvas",
+  "noAssetsYet": "No assets yet",
+
+  "locked": "Locked",
+  "unlocked": "Unlocked",
+  "visible": "Visible",
+  "hidden": "Hidden",
+
+  "fillColor": "Fill Color",
+  "strokeColor": "Stroke Color",
+  "strokeWeight": "Stroke Weight",
+  "cornerRadius": "Corner Radius",
+  "opacity": "Opacity",
+
+  "position": "Position",
+  "size": "Size",
+  "rotation": "Rotation",
+
+  "fontSize": "Font Size",
+  "fontFamily": "Font Family",
+  "textAlign": "Text Align",
+
+  "exportSettings": "Export Settings",
+  "addExportSetting": "Add Export Setting",
+  "scale": "Scale",
+  "format": "Format"
+}
