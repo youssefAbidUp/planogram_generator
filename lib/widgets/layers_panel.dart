@@ -1,6 +1,7 @@
 // lib/widgets/layers_panel.dart
 // Layers/Hierarchy Panel - Shows all elements in tree structure
 
+import 'package:figma_editor/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../state/app_state.dart';
@@ -29,12 +30,12 @@ class LayersPanel extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
                   Text(
-                    'No elements yet',
+                    AppLocalizations.of(context)!.noElementsYet,
                     style: TextStyle(fontSize: 13, color: Colors.grey.shade600),
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'Create elements on canvas',
+                    AppLocalizations.of(context)!.createElementsOnCanvas,
                     style: TextStyle(fontSize: 11, color: Colors.grey.shade500),
                   ),
                 ],
@@ -166,7 +167,9 @@ class _LayerItemState extends State<_LayerItem> {
                     minWidth: 24,
                     minHeight: 24,
                   ),
-                  tooltip: widget.node.locked ? 'Unlock' : 'Lock',
+                  tooltip: widget.node.locked
+                      ? AppLocalizations.of(context)!.unlock
+                      : AppLocalizations.of(context)!.lock,
                 ),
 
                 // Visibility toggle
@@ -186,7 +189,9 @@ class _LayerItemState extends State<_LayerItem> {
                     minWidth: 24,
                     minHeight: 24,
                   ),
-                  tooltip: widget.node.visible ? 'Hide' : 'Show',
+                  tooltip: widget.node.visible
+                      ? AppLocalizations.of(context)!.hide
+                      : AppLocalizations.of(context)!.show,
                 ),
               ],
             ],

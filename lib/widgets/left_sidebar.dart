@@ -1,5 +1,6 @@
 // lib/widgets/left_sidebar.dart
 
+import 'package:figma_editor/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../state/app_state.dart';
@@ -31,7 +32,8 @@ class LeftSidebar extends StatelessWidget {
           Expanded(
             child: Consumer<AppState>(
               builder: (context, appState, _) {
-                if (appState.leftSidebarTab == 'File') {
+                if (appState.leftSidebarTab ==
+                    AppLocalizations.of(context)!.file) {
                   return const _FileTabContent();
                 } else {
                   return const _AssetsTabContent();
@@ -61,19 +63,27 @@ class _TabBar extends StatelessWidget {
           child: Row(
             children: [
               CustomTab(
-                label: 'File',
-                isSelected: appState.leftSidebarTab == 'File',
+                label: AppLocalizations.of(context)!.file,
+                isSelected:
+                    appState.leftSidebarTab ==
+                    AppLocalizations.of(context)!.file,
                 onTap: () {
-                  appState.setLeftSidebarTab('File');
+                  appState.setLeftSidebarTab(
+                    AppLocalizations.of(context)!.file,
+                  );
                   print('File tab selected');
                 },
               ),
               const SizedBox(width: 4),
               CustomTab(
-                label: 'Assets',
-                isSelected: appState.leftSidebarTab == 'Assets',
+                label: AppLocalizations.of(context)!.assets,
+                isSelected:
+                    appState.leftSidebarTab ==
+                    AppLocalizations.of(context)!.assets,
                 onTap: () {
-                  appState.setLeftSidebarTab('Assets');
+                  appState.setLeftSidebarTab(
+                    AppLocalizations.of(context)!.assets,
+                  );
                   print('Assets tab selected');
                 },
               ),
@@ -98,7 +108,7 @@ class _SearchBar extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.all(12),
           child: SearchField(
-            hintText: 'Search all libraries',
+            hintText: AppLocalizations.of(context)!.searchAllLibraries,
             onChanged: (value) {
               appState.setLibrarySearchQuery(value);
             },
@@ -151,7 +161,7 @@ class _FilterBottomSheetState extends State<_FilterBottomSheet> {
 
           // WORKING CHECKBOX 1
           CheckboxField(
-            label: 'Show UI Kits',
+            label: AppLocalizations.of(context)!.showUIKits,
             value: showUIKits,
             onChanged: (value) {
               print('🔵 UI Kits: $value');
@@ -163,7 +173,7 @@ class _FilterBottomSheetState extends State<_FilterBottomSheet> {
 
           // WORKING CHECKBOX 2
           CheckboxField(
-            label: 'Show Components',
+            label: AppLocalizations.of(context)!.showComponents,
             value: showComponents,
             onChanged: (value) {
               print('🔵 Components: $value');
@@ -175,7 +185,7 @@ class _FilterBottomSheetState extends State<_FilterBottomSheet> {
 
           // WORKING CHECKBOX 3
           CheckboxField(
-            label: 'Show Icons',
+            label: AppLocalizations.of(context)!.showIcons,
             value: showIcons,
             onChanged: (value) {
               print('🔵 Icons: $value');
@@ -188,7 +198,7 @@ class _FilterBottomSheetState extends State<_FilterBottomSheet> {
           const SizedBox(height: 16),
 
           CustomButton(
-            label: 'Apply Filters',
+            label: AppLocalizations.of(context)!.applyFilters,
             onPressed: () {
               print('✅ Filters applied:');
               print('   - UI Kits: $showUIKits');
@@ -231,7 +241,7 @@ class _FileTabContent extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
               child: Text(
-                'All libraries',
+                AppLocalizations.of(context)!.allLibraries,
                 style: TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w600,
@@ -262,7 +272,7 @@ class _FileTabContent extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
                 child: Text(
-                  'UI kits',
+                  AppLocalizations.of(context)!.uiKits,
                   style: TextStyle(
                     fontSize: 11,
                     fontWeight: FontWeight.w600,
@@ -347,29 +357,29 @@ class _FileTabContent extends StatelessWidget {
         position: const Offset(100, 200),
         items: [
           ContextMenuItem(
-            label: 'Open',
+            label: AppLocalizations.of(context)!.open,
             icon: Icons.folder_open,
             onTap: () => print('Open: ${library.name}'),
           ),
           ContextMenuItem(
-            label: 'Add to Favorites',
+            label: AppLocalizations.of(context)!.addToFavorites,
             icon: Icons.star_outline,
             onTap: () => print('Add to favorites: ${library.name}'),
           ),
           ContextMenuItem.divider,
           ContextMenuItem(
-            label: 'View Details',
+            label: AppLocalizations.of(context)!.viewDetails,
             icon: Icons.info_outline,
             onTap: () => print('View details: ${library.name}'),
           ),
           ContextMenuItem(
-            label: 'Share',
+            label: AppLocalizations.of(context)!.share,
             icon: Icons.share,
             onTap: () => print('Share: ${library.name}'),
           ),
           ContextMenuItem.divider,
           ContextMenuItem(
-            label: 'Remove',
+            label: AppLocalizations.of(context)!.remove,
             icon: Icons.delete_outline,
             isDestructive: true,
             onTap: () => print('Remove: ${library.name}'),
@@ -388,10 +398,10 @@ class _AssetsTabContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const EmptyState(
+    return EmptyState(
       icon: Icons.photo_library,
-      message: 'No assets yet',
-      actionLabel: 'Import Assets',
+      message: AppLocalizations.of(context)!.noAssetsYet,
+      actionLabel: AppLocalizations.of(context)!.importAssets,
     );
   }
 }

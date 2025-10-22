@@ -423,6 +423,384 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Format'**
   String get format;
+
+  /// No description provided for @untitled.
+  ///
+  /// In en, this message translates to:
+  /// **'Untitled'**
+  String get untitled;
+
+  /// No description provided for @renameProject.
+  ///
+  /// In en, this message translates to:
+  /// **'Rename Project'**
+  String get renameProject;
+
+  /// No description provided for @projectName.
+  ///
+  /// In en, this message translates to:
+  /// **'Project Name'**
+  String get projectName;
+
+  /// No description provided for @copyLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Copy link'**
+  String get copyLink;
+
+  /// No description provided for @inviteCollaborators.
+  ///
+  /// In en, this message translates to:
+  /// **'Invite collaborators'**
+  String get inviteCollaborators;
+
+  /// No description provided for @publishToWeb.
+  ///
+  /// In en, this message translates to:
+  /// **'Publish to web'**
+  String get publishToWeb;
+
+  /// No description provided for @profile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profile;
+
+  /// No description provided for @help.
+  ///
+  /// In en, this message translates to:
+  /// **'Help'**
+  String get help;
+
+  /// No description provided for @logout.
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get logout;
+
+  /// No description provided for @searchAllLibraries.
+  ///
+  /// In en, this message translates to:
+  /// **'Search all libraries'**
+  String get searchAllLibraries;
+
+  /// No description provided for @allLibraries.
+  ///
+  /// In en, this message translates to:
+  /// **'All libraries'**
+  String get allLibraries;
+
+  /// No description provided for @uiKits.
+  ///
+  /// In en, this message translates to:
+  /// **'UI kits'**
+  String get uiKits;
+
+  /// No description provided for @filterLibraries.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter Libraries'**
+  String get filterLibraries;
+
+  /// No description provided for @showUIKits.
+  ///
+  /// In en, this message translates to:
+  /// **'Show UI Kits'**
+  String get showUIKits;
+
+  /// No description provided for @showComponents.
+  ///
+  /// In en, this message translates to:
+  /// **'Show Components'**
+  String get showComponents;
+
+  /// No description provided for @showIcons.
+  ///
+  /// In en, this message translates to:
+  /// **'Show Icons'**
+  String get showIcons;
+
+  /// No description provided for @applyFilters.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply Filters'**
+  String get applyFilters;
+
+  /// No description provided for @noLibrariesFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No libraries found for \"{query}\"'**
+  String noLibrariesFound(Object query);
+
+  /// No description provided for @openLibrary.
+  ///
+  /// In en, this message translates to:
+  /// **'Open Library'**
+  String get openLibrary;
+
+  /// No description provided for @viewDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'View Details'**
+  String get viewDetails;
+
+  /// No description provided for @open.
+  ///
+  /// In en, this message translates to:
+  /// **'Open'**
+  String get open;
+
+  /// No description provided for @addToFavorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to Favorites'**
+  String get addToFavorites;
+
+  /// No description provided for @remove.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove'**
+  String get remove;
+
+  /// No description provided for @importAssets.
+  ///
+  /// In en, this message translates to:
+  /// **'Import Assets'**
+  String get importAssets;
+
+  /// No description provided for @page.
+  ///
+  /// In en, this message translates to:
+  /// **'Page'**
+  String get page;
+
+  /// No description provided for @background.
+  ///
+  /// In en, this message translates to:
+  /// **'Background'**
+  String get background;
+
+  /// No description provided for @showInExports.
+  ///
+  /// In en, this message translates to:
+  /// **'Show in exports'**
+  String get showInExports;
+
+  /// No description provided for @clipContent.
+  ///
+  /// In en, this message translates to:
+  /// **'Clip content'**
+  String get clipContent;
+
+  /// No description provided for @noExportSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'No export settings'**
+  String get noExportSettings;
+
+  /// No description provided for @preview.
+  ///
+  /// In en, this message translates to:
+  /// **'Preview'**
+  String get preview;
+
+  /// No description provided for @selectFrameToAddInteractions.
+  ///
+  /// In en, this message translates to:
+  /// **'Select a frame to add interactions'**
+  String get selectFrameToAddInteractions;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @apply.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply'**
+  String get apply;
+
+  /// No description provided for @editText.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Text'**
+  String get editText;
+
+  /// No description provided for @enterText.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter text...'**
+  String get enterText;
+
+  /// No description provided for @doubleClickToEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Double click to edit'**
+  String get doubleClickToEdit;
+
+  /// No description provided for @zoomToFit.
+  ///
+  /// In en, this message translates to:
+  /// **'Zoom to fit'**
+  String get zoomToFit;
+
+  /// No description provided for @lock.
+  ///
+  /// In en, this message translates to:
+  /// **'Lock'**
+  String get lock;
+
+  /// No description provided for @unlock.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock'**
+  String get unlock;
+
+  /// No description provided for @hide.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide'**
+  String get hide;
+
+  /// No description provided for @show.
+  ///
+  /// In en, this message translates to:
+  /// **'Show'**
+  String get show;
+
+  /// No description provided for @backgroundColor.
+  ///
+  /// In en, this message translates to:
+  /// **'Background Color'**
+  String get backgroundColor;
+
+  /// No description provided for @colorPickerHere.
+  ///
+  /// In en, this message translates to:
+  /// **'Color picker would go here'**
+  String get colorPickerHere;
+
+  /// No description provided for @english.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get english;
+
+  /// No description provided for @french.
+  ///
+  /// In en, this message translates to:
+  /// **'Français'**
+  String get french;
+
+  /// No description provided for @arabic.
+  ///
+  /// In en, this message translates to:
+  /// **'العربية'**
+  String get arabic;
+
+  /// No description provided for @selectLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Language'**
+  String get selectLanguage;
+
+  /// No description provided for @selectElementToEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Select an element to edit its properties'**
+  String get selectElementToEdit;
+
+  /// No description provided for @element.
+  ///
+  /// In en, this message translates to:
+  /// **'Element'**
+  String get element;
+
+  /// No description provided for @positionAndSize.
+  ///
+  /// In en, this message translates to:
+  /// **'Position and Size'**
+  String get positionAndSize;
+
+  /// No description provided for @appearance.
+  ///
+  /// In en, this message translates to:
+  /// **'Appearance'**
+  String get appearance;
+
+  /// No description provided for @deleteElement.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Element'**
+  String get deleteElement;
+
+  /// No description provided for @fillType.
+  ///
+  /// In en, this message translates to:
+  /// **'Fill Type'**
+  String get fillType;
+
+  /// No description provided for @solidColor.
+  ///
+  /// In en, this message translates to:
+  /// **'Solid Color'**
+  String get solidColor;
+
+  /// No description provided for @gradient.
+  ///
+  /// In en, this message translates to:
+  /// **'Gradient'**
+  String get gradient;
+
+  /// No description provided for @image.
+  ///
+  /// In en, this message translates to:
+  /// **'Image'**
+  String get image;
+
+  /// No description provided for @gradientPicker.
+  ///
+  /// In en, this message translates to:
+  /// **'Gradient Picker'**
+  String get gradientPicker;
+
+  /// No description provided for @linearGradient.
+  ///
+  /// In en, this message translates to:
+  /// **'Linear Gradient'**
+  String get linearGradient;
+
+  /// No description provided for @radialGradient.
+  ///
+  /// In en, this message translates to:
+  /// **'Radial Gradient'**
+  String get radialGradient;
+
+  /// No description provided for @sunsetGradient.
+  ///
+  /// In en, this message translates to:
+  /// **'Sunset Gradient'**
+  String get sunsetGradient;
+
+  /// No description provided for @project.
+  ///
+  /// In en, this message translates to:
+  /// **'Project'**
+  String get project;
+
+  /// No description provided for @menu.
+  ///
+  /// In en, this message translates to:
+  /// **'Menu'**
+  String get menu;
+
+  /// No description provided for @y.
+  ///
+  /// In en, this message translates to:
+  /// **'Y'**
+  String get y;
 }
 
 class _AppLocalizationsDelegate

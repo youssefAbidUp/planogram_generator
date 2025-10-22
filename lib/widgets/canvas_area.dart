@@ -1,6 +1,7 @@
 // lib/widgets/canvas_area.dart
 // COMPLETE WORKING VERSION
 
+import 'package:figma_editor/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:provider/provider.dart';
@@ -148,7 +149,8 @@ class _CanvasAreaState extends State<CanvasArea> {
       case ToolType.rectangle:
         newNode = RectangleNode(
           id: DateTime.now().millisecondsSinceEpoch.toString(),
-          name: 'Rectangle ${(appState.currentPage?.children.length ?? 0) + 1}',
+          name:
+              '${AppLocalizations.of(context)!.rectangle} ${(appState.currentPage?.children.length ?? 0) + 1}',
           position: position,
           size: const Size(100, 100),
           fillColor: Colors.blue.shade200,
@@ -158,7 +160,8 @@ class _CanvasAreaState extends State<CanvasArea> {
       case ToolType.ellipse:
         newNode = EllipseNode(
           id: DateTime.now().millisecondsSinceEpoch.toString(),
-          name: 'Ellipse ${(appState.currentPage?.children.length ?? 0) + 1}',
+          name:
+              '${AppLocalizations.of(context)!.ellipse} ${(appState.currentPage?.children.length ?? 0) + 1}',
           position: position,
           size: const Size(100, 100),
           fillColor: Colors.purple.shade200,
@@ -168,10 +171,11 @@ class _CanvasAreaState extends State<CanvasArea> {
       case ToolType.text:
         newNode = TextNode(
           id: DateTime.now().millisecondsSinceEpoch.toString(),
-          name: 'Text ${(appState.currentPage?.children.length ?? 0) + 1}',
+          name:
+              '${AppLocalizations.of(context)!.text} ${(appState.currentPage?.children.length ?? 0) + 1}',
           position: position,
           size: const Size(200, 50),
-          text: 'Double click to edit',
+          text: AppLocalizations.of(context)!.doubleClickToEdit,
           fontSize: 16,
           color: Colors.black,
         );
@@ -229,27 +233,27 @@ class _CanvasAreaState extends State<CanvasArea> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Edit Text'),
+        title: Text(AppLocalizations.of(context)!.editText),
         content: TextField(
           controller: controller,
           autofocus: true,
           maxLines: null,
-          decoration: const InputDecoration(
+          decoration: InputDecoration(
             border: OutlineInputBorder(),
-            hintText: 'Enter text...',
+            hintText: AppLocalizations.of(context)!.enterText,
           ),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: Text(AppLocalizations.of(context)!.cancel),
           ),
           TextButton(
             onPressed: () {
               appState.updateNodeProperty(textNode, 'text', controller.text);
               Navigator.pop(context);
             },
-            child: const Text('Apply'),
+            child: Text(AppLocalizations.of(context)!.apply),
           ),
         ],
       ),
@@ -365,7 +369,7 @@ class _CanvasAreaState extends State<CanvasArea> {
                   appState.setCanvasZoom(appState.canvasZoom - 0.1),
               padding: EdgeInsets.zero,
               constraints: const BoxConstraints(minWidth: 28, minHeight: 28),
-              tooltip: 'Zoom out',
+              tooltip: AppLocalizations.of(context)!.zoomOut,
             ),
             PopupMenuButton<double>(
               onSelected: (value) {
@@ -394,7 +398,10 @@ class _CanvasAreaState extends State<CanvasArea> {
                 _buildZoomMenuItem('150%', 1.5),
                 _buildZoomMenuItem('200%', 2.0),
                 const PopupMenuDivider(),
-                const PopupMenuItem(value: -1, child: Text('Zoom to fit')),
+                PopupMenuItem(
+                  value: -1,
+                  child: Text(AppLocalizations.of(context)!.zoomToFit),
+                ),
               ],
             ),
             IconButton(
@@ -403,7 +410,7 @@ class _CanvasAreaState extends State<CanvasArea> {
                   appState.setCanvasZoom(appState.canvasZoom + 0.1),
               padding: EdgeInsets.zero,
               constraints: const BoxConstraints(minWidth: 28, minHeight: 28),
-              tooltip: 'Zoom in',
+              tooltip: AppLocalizations.of(context)!.zoomIn,
             ),
           ],
         ),
@@ -420,7 +427,7 @@ class _CanvasAreaState extends State<CanvasArea> {
       top: 16,
       left: 180,
       child: Tooltip(
-        message: 'Reset view',
+        message: AppLocalizations.of(context)!.resetView,
         child: Container(
           decoration: BoxDecoration(
             color: Colors.white,

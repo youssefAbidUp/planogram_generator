@@ -169,4 +169,197 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get format => 'Format';
+
+  @override
+  String get untitled => 'Sans titre';
+
+  @override
+  String get renameProject => 'Renommer le projet';
+
+  @override
+  String get projectName => 'Nom du projet';
+
+  @override
+  String get copyLink => 'Copier le lien';
+
+  @override
+  String get inviteCollaborators => 'Inviter des collaborateurs';
+
+  @override
+  String get publishToWeb => 'Publier sur le web';
+
+  @override
+  String get profile => 'Profil';
+
+  @override
+  String get help => 'Aide';
+
+  @override
+  String get logout => 'Déconnexion';
+
+  @override
+  String get searchAllLibraries => 'Rechercher toutes les bibliothèques';
+
+  @override
+  String get allLibraries => 'Toutes les bibliothèques';
+
+  @override
+  String get uiKits => 'Kits d\'interface utilisateur';
+
+  @override
+  String get filterLibraries => 'Filtrer les bibliothèques';
+
+  @override
+  String get showUIKits => 'Afficher les kits d\'interface';
+
+  @override
+  String get showComponents => 'Afficher les composants';
+
+  @override
+  String get showIcons => 'Afficher les icônes';
+
+  @override
+  String get applyFilters => 'Appliquer les filtres';
+
+  @override
+  String noLibrariesFound(Object query) {
+    return 'Aucune bibliothèque trouvée pour \"$query\"';
+  }
+
+  @override
+  String get openLibrary => 'Ouvrir la bibliothèque';
+
+  @override
+  String get viewDetails => 'Voir les détails';
+
+  @override
+  String get open => 'Ouvrir';
+
+  @override
+  String get addToFavorites => 'Ajouter aux favoris';
+
+  @override
+  String get remove => 'Supprimer';
+
+  @override
+  String get importAssets => 'Importer des ressources';
+
+  @override
+  String get page => 'Page';
+
+  @override
+  String get background => 'Arrière-plan';
+
+  @override
+  String get showInExports => 'Afficher dans les exportations';
+
+  @override
+  String get clipContent => 'Rogner le contenu';
+
+  @override
+  String get noExportSettings => 'Aucun paramètre d\'exportation';
+
+  @override
+  String get preview => 'Aperçu';
+
+  @override
+  String get selectFrameToAddInteractions =>
+      'Sélectionnez un cadre pour ajouter des interactions';
+
+  @override
+  String get cancel => 'Annuler';
+
+  @override
+  String get apply => 'Appliquer';
+
+  @override
+  String get editText => 'Modifier le texte';
+
+  @override
+  String get enterText => 'Entrez du texte...';
+
+  @override
+  String get doubleClickToEdit => 'Double-cliquez pour modifier';
+
+  @override
+  String get zoomToFit => 'Ajuster à la taille';
+
+  @override
+  String get lock => 'Verrouiller';
+
+  @override
+  String get unlock => 'Déverrouiller';
+
+  @override
+  String get hide => 'Masquer';
+
+  @override
+  String get show => 'Afficher';
+
+  @override
+  String get backgroundColor => 'Couleur de fond';
+
+  @override
+  String get colorPickerHere => 'Le sélecteur de couleur sera ici';
+
+  @override
+  String get english => 'Anglais';
+
+  @override
+  String get french => 'Français';
+
+  @override
+  String get arabic => 'Arabe';
+
+  @override
+  String get selectLanguage => 'Sélectionner la langue';
+
+  @override
+  String get selectElementToEdit =>
+      'Sélectionnez un élément pour modifier ses propriétés';
+
+  @override
+  String get element => 'Élément';
+
+  @override
+  String get positionAndSize => 'Position et Taille';
+
+  @override
+  String get appearance => 'Apparence';
+
+  @override
+  String get deleteElement => 'Supprimer l\'Élément';
+
+  @override
+  String get fillType => 'Type de Remplissage';
+
+  @override
+  String get solidColor => 'Couleur Unie';
+
+  @override
+  String get gradient => 'Dégradé';
+
+  @override
+  String get image => 'Image';
+
+  @override
+  String get gradientPicker => 'Sélecteur de Dégradé';
+
+  @override
+  String get linearGradient => 'Dégradé Linéaire';
+
+  @override
+  String get radialGradient => 'Dégradé Radial';
+
+  @override
+  String get sunsetGradient => 'Dégradé Coucher de Soleil';
+
+  @override
+  String get project => 'Projet';
+
+  @override
+  String get menu => 'Menu';
+
+  @override
+  String get y => 'Y';
 }

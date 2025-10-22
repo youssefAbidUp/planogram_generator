@@ -169,4 +169,196 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get format => 'Format';
+
+  @override
+  String get untitled => 'Untitled';
+
+  @override
+  String get renameProject => 'Rename Project';
+
+  @override
+  String get projectName => 'Project Name';
+
+  @override
+  String get copyLink => 'Copy link';
+
+  @override
+  String get inviteCollaborators => 'Invite collaborators';
+
+  @override
+  String get publishToWeb => 'Publish to web';
+
+  @override
+  String get profile => 'Profile';
+
+  @override
+  String get help => 'Help';
+
+  @override
+  String get logout => 'Logout';
+
+  @override
+  String get searchAllLibraries => 'Search all libraries';
+
+  @override
+  String get allLibraries => 'All libraries';
+
+  @override
+  String get uiKits => 'UI kits';
+
+  @override
+  String get filterLibraries => 'Filter Libraries';
+
+  @override
+  String get showUIKits => 'Show UI Kits';
+
+  @override
+  String get showComponents => 'Show Components';
+
+  @override
+  String get showIcons => 'Show Icons';
+
+  @override
+  String get applyFilters => 'Apply Filters';
+
+  @override
+  String noLibrariesFound(Object query) {
+    return 'No libraries found for \"$query\"';
+  }
+
+  @override
+  String get openLibrary => 'Open Library';
+
+  @override
+  String get viewDetails => 'View Details';
+
+  @override
+  String get open => 'Open';
+
+  @override
+  String get addToFavorites => 'Add to Favorites';
+
+  @override
+  String get remove => 'Remove';
+
+  @override
+  String get importAssets => 'Import Assets';
+
+  @override
+  String get page => 'Page';
+
+  @override
+  String get background => 'Background';
+
+  @override
+  String get showInExports => 'Show in exports';
+
+  @override
+  String get clipContent => 'Clip content';
+
+  @override
+  String get noExportSettings => 'No export settings';
+
+  @override
+  String get preview => 'Preview';
+
+  @override
+  String get selectFrameToAddInteractions =>
+      'Select a frame to add interactions';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get apply => 'Apply';
+
+  @override
+  String get editText => 'Edit Text';
+
+  @override
+  String get enterText => 'Enter text...';
+
+  @override
+  String get doubleClickToEdit => 'Double click to edit';
+
+  @override
+  String get zoomToFit => 'Zoom to fit';
+
+  @override
+  String get lock => 'Lock';
+
+  @override
+  String get unlock => 'Unlock';
+
+  @override
+  String get hide => 'Hide';
+
+  @override
+  String get show => 'Show';
+
+  @override
+  String get backgroundColor => 'Background Color';
+
+  @override
+  String get colorPickerHere => 'Color picker would go here';
+
+  @override
+  String get english => 'English';
+
+  @override
+  String get french => 'Français';
+
+  @override
+  String get arabic => 'العربية';
+
+  @override
+  String get selectLanguage => 'Select Language';
+
+  @override
+  String get selectElementToEdit => 'Select an element to edit its properties';
+
+  @override
+  String get element => 'Element';
+
+  @override
+  String get positionAndSize => 'Position and Size';
+
+  @override
+  String get appearance => 'Appearance';
+
+  @override
+  String get deleteElement => 'Delete Element';
+
+  @override
+  String get fillType => 'Fill Type';
+
+  @override
+  String get solidColor => 'Solid Color';
+
+  @override
+  String get gradient => 'Gradient';
+
+  @override
+  String get image => 'Image';
+
+  @override
+  String get gradientPicker => 'Gradient Picker';
+
+  @override
+  String get linearGradient => 'Linear Gradient';
+
+  @override
+  String get radialGradient => 'Radial Gradient';
+
+  @override
+  String get sunsetGradient => 'Sunset Gradient';
+
+  @override
+  String get project => 'Project';
+
+  @override
+  String get menu => 'Menu';
+
+  @override
+  String get y => 'Y';
 }

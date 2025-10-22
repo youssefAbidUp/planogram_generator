@@ -1,10 +1,12 @@
 // lib/main.dart
 
-import 'package:figma_editor/screens/figma_editor.dart';
-import 'package:figma_editor/state/app_state.dart';
+import 'screens/figma_editor.dart';
+import 'state/app_state.dart';
+import 'state/locale_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'models/models.dart';
+import 'l10n/app_localizations.dart';
 
 void main() {
   runApp(const FigmaEditorApp());
@@ -15,18 +17,35 @@ class FigmaEditorApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => AppState()..initializeWithDemoData(),
-      child: MaterialApp(
-        title: 'Figma Editor',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          brightness: Brightness.light,
-          primarySwatch: Colors.blue,
-          scaffoldBackgroundColor: const Color(0xFFF5F5F5),
-          fontFamily: 'Inter',
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => AppState()..initializeWithDemoData(),
         ),
-        home: const FigmaEditorScreen(),
+        ChangeNotifierProvider(create: (_) => LocaleProvider()),
+      ],
+      child: Consumer<LocaleProvider>(
+        builder: (context, localeProvider, _) {
+          return MaterialApp(
+            locale: localeProvider.locale,
+            // Use generated localizations
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
+            onGenerateTitle: (context) =>
+                AppLocalizations.of(context)?.appTitle ?? 'Figma Editor',
+            title: AppLocalizations.supportedLocales.isNotEmpty
+                ? AppLocalizations.supportedLocales.first.toString()
+                : 'Figma Editor',
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              brightness: Brightness.light,
+              primarySwatch: Colors.blue,
+              scaffoldBackgroundColor: const Color(0xFFF5F5F5),
+              fontFamily: 'Inter',
+            ),
+            home: const FigmaEditorScreen(),
+          );
+        },
       ),
     );
   }

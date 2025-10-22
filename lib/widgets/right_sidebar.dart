@@ -1,5 +1,6 @@
 // lib/widgets/right_sidebar.dart - FIXED VERSION WITH WORKING CHECKBOXES
 
+import 'package:figma_editor/l10n/app_localizations.dart';
 import 'package:flutter/material.dart' hide DropdownButton;
 import 'package:provider/provider.dart';
 import '../state/app_state.dart';
@@ -12,6 +13,7 @@ class RightSidebar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return Container(
       width: 280,
       decoration: BoxDecoration(
@@ -47,6 +49,7 @@ class _TabBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return Consumer<AppState>(
       builder: (context, appState, _) {
         return Container(
@@ -55,13 +58,13 @@ class _TabBar extends StatelessWidget {
           child: Row(
             children: [
               CustomTab(
-                label: 'Design',
+                label: localizations.design,
                 isSelected: appState.rightSidebarTab == 'Design',
                 onTap: () => appState.setRightSidebarTab('Design'),
               ),
               const SizedBox(width: 4),
               CustomTab(
-                label: 'Prototype',
+                label: localizations.prototype,
                 isSelected: appState.rightSidebarTab == 'Prototype',
                 onTap: () => appState.setRightSidebarTab('Prototype'),
               ),
@@ -81,6 +84,7 @@ class _DesignTabContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return Consumer<AppState>(
       builder: (context, appState, _) {
         // If a node is selected, show its properties
@@ -94,7 +98,7 @@ class _DesignTabContent extends StatelessWidget {
             children: [
               // Page Section - WITH WORKING CHECKBOXES
               CollapsibleSection(
-                title: 'Page',
+                title: localizations.page,
                 isExpanded: appState.isSectionExpanded('Page'),
                 onToggle: () => appState.toggleSection('Page'),
                 children: [
@@ -107,13 +111,13 @@ class _DesignTabContent extends StatelessWidget {
               Divider(height: 1, color: Colors.grey.shade300),
 
               CollapsibleSection(
-                title: 'Export',
+                title: localizations.export,
                 isExpanded: appState.isSectionExpanded('Export'),
                 onToggle: () => appState.toggleSection('Export'),
                 trailing: CustomIconButton(
                   icon: Icons.add,
                   onPressed: () => appState.addExportSetting(),
-                  tooltip: 'Add export setting',
+                  tooltip: localizations.addExportSetting,
                 ),
                 children: [
                   const SizedBox(height: 12),
@@ -146,10 +150,11 @@ class _PageSettingsState extends State<_PageSettings> {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return Column(
       children: [
         PropertyRow(
-          label: 'Background',
+          label: localizations.background,
           value: '100%',
           labelColor: const Color(0xFFF5F5F5),
           trailing: Icon(
@@ -167,7 +172,7 @@ class _PageSettingsState extends State<_PageSettings> {
 
         // WORKING CHECKBOX 1
         CheckboxField(
-          label: 'Show in exports',
+          label: localizations.showInExports,
           value: showInExports,
           onChanged: (value) {
             print('🟢 Checkbox 1 clicked - Old: $showInExports, New: $value');
@@ -182,7 +187,7 @@ class _PageSettingsState extends State<_PageSettings> {
 
         // WORKING CHECKBOX 2
         CheckboxField(
-          label: 'Clip content',
+          label: localizations.clipContent,
           value: clipContent,
           onChanged: (value) {
             print('🟢 Checkbox 2 clicked - Old: $clipContent, New: $value');
@@ -197,19 +202,20 @@ class _PageSettingsState extends State<_PageSettings> {
   }
 
   void _showColorPicker(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Background Color'),
-        content: const Text('Color picker would go here'),
+        title: Text(localizations.backgroundColor),
+        content: Text(localizations.colorPickerHere),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: Text(localizations.cancel),
           ),
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Apply'),
+            child: Text(localizations.apply),
           ),
         ],
       ),
@@ -225,13 +231,14 @@ class _ExportSettingsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return Consumer<AppState>(
       builder: (context, appState, _) {
         if (appState.exportSettings.isEmpty) {
           return Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              'No export settings',
+              localizations.noExportSettings,
               style: TextStyle(fontSize: 12, color: Colors.grey.shade500),
             ),
           );
@@ -254,6 +261,8 @@ class _ExportSettingItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     return Consumer<AppState>(
       builder: (context, appState, _) {
         return Container(
@@ -301,14 +310,14 @@ class _ExportSettingItem extends StatelessWidget {
                       }
                     },
                     itemBuilder: (context) => [
-                      const PopupMenuItem(
+                      PopupMenuItem(
                         value: 'settings',
-                        child: Text('Export settings'),
+                        child: Text(localizations.exportSettings),
                       ),
-                      const PopupMenuItem(
+                      PopupMenuItem(
                         value: 'remove',
                         child: Text(
-                          'Remove',
+                          localizations.remove,
                           style: TextStyle(color: Colors.red),
                         ),
                       ),
@@ -318,7 +327,8 @@ class _ExportSettingItem extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               CustomButton(
-                label: 'Export ${appState.currentProject?.name ?? "Project"}',
+                label:
+                    '${localizations.export} ${appState.currentProject?.name ?? localizations.project}',
                 onPressed: () {
                   print(
                     'Exporting as ${exportSetting.format} at ${exportSetting.scale}',
@@ -329,7 +339,7 @@ class _ExportSettingItem extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               CustomButton(
-                label: 'Preview',
+                label: localizations.preview,
                 onPressed: () => print('Preview export'),
                 fullWidth: true,
               ),
@@ -349,9 +359,10 @@ class _PrototypeTabContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const EmptyState(
+    final localizations = AppLocalizations.of(context)!;
+    return EmptyState(
       icon: Icons.play_circle_outline,
-      message: 'Select a frame to add interactions',
+      message: localizations.selectFrameToAddInteractions,
     );
   }
 }

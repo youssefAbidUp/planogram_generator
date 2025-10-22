@@ -1,10 +1,14 @@
 // lib/widgets/top_toolbar.dart
 
-import 'package:figma_editor/state/app_state.dart';
+import 'package:figma_editor/l10n/app_localizations.dart';
+
+import '../state/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../state/locale_provider.dart';
 import '../models/models.dart';
 import 'common_widgets.dart';
+import 'language_selector.dart';
 
 class TopToolbar extends StatelessWidget {
   final bool isTablet;
@@ -20,6 +24,7 @@ class TopToolbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return Container(
       height: 48,
       decoration: BoxDecoration(
@@ -35,7 +40,7 @@ class TopToolbar extends StatelessWidget {
             IconButton(
               icon: const Icon(Icons.menu),
               onPressed: onMenuTap,
-              tooltip: 'Menu',
+              tooltip: localizations.menu,
             ),
 
           // File name dropdown
@@ -62,9 +67,11 @@ class TopToolbar extends StatelessWidget {
 class _FileNameDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return Consumer<AppState>(
       builder: (context, appState, _) {
-        final projectName = appState.currentProject?.name ?? 'Untitled';
+        final projectName =
+            appState.currentProject?.name ?? localizations.untitled;
 
         return PopupMenuButton<String>(
           onSelected: (value) {
@@ -110,44 +117,44 @@ class _FileNameDropdown extends StatelessWidget {
             ),
           ),
           itemBuilder: (context) => [
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'rename',
               child: Row(
                 children: [
-                  Icon(Icons.edit, size: 16),
-                  SizedBox(width: 8),
-                  Text('Rename'),
+                  const Icon(Icons.edit, size: 16),
+                  const SizedBox(width: 8),
+                  Text(localizations.rename),
                 ],
               ),
             ),
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'duplicate',
               child: Row(
                 children: [
-                  Icon(Icons.content_copy, size: 16),
-                  SizedBox(width: 8),
-                  Text('Duplicate'),
+                  const Icon(Icons.content_copy, size: 16),
+                  const SizedBox(width: 8),
+                  Text(localizations.duplicate),
                 ],
               ),
             ),
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'export',
               child: Row(
                 children: [
-                  Icon(Icons.download, size: 16),
-                  SizedBox(width: 8),
-                  Text('Export'),
+                  const Icon(Icons.download, size: 16),
+                  const SizedBox(width: 8),
+                  Text(localizations.export),
                 ],
               ),
             ),
             const PopupMenuDivider(),
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'settings',
               child: Row(
                 children: [
-                  Icon(Icons.settings, size: 16),
-                  SizedBox(width: 8),
-                  Text('Settings'),
+                  const Icon(Icons.settings, size: 16),
+                  const SizedBox(width: 8),
+                  Text(localizations.settings),
                 ],
               ),
             ),
@@ -158,23 +165,24 @@ class _FileNameDropdown extends StatelessWidget {
   }
 
   void _showRenameDialog(BuildContext context, String currentName) {
+    final localizations = AppLocalizations.of(context)!;
     final controller = TextEditingController(text: currentName);
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Rename Project'),
+        title: Text(localizations.renameProject),
         content: TextField(
           controller: controller,
-          decoration: const InputDecoration(
-            labelText: 'Project Name',
-            border: OutlineInputBorder(),
+          decoration: InputDecoration(
+            labelText: localizations.projectName,
+            border: const OutlineInputBorder(),
           ),
           autofocus: true,
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: Text(localizations.cancel),
           ),
           TextButton(
             onPressed: () {
@@ -182,7 +190,7 @@ class _FileNameDropdown extends StatelessWidget {
               print('New name: ${controller.text}');
               Navigator.pop(context);
             },
-            child: const Text('Rename'),
+            child: Text(localizations.rename),
           ),
         ],
       ),
@@ -234,13 +242,15 @@ class _RightActions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
         // Prototype button
         TextButton.icon(
           icon: const Icon(Icons.play_arrow, size: 18),
-          label: const Text('Prototype'),
+          label: Text(localizations.prototype),
           style: TextButton.styleFrom(
             foregroundColor: Colors.grey.shade700,
             padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -278,10 +288,10 @@ class _RightActions extends StatelessWidget {
               color: Colors.blue,
               borderRadius: BorderRadius.circular(6),
             ),
-            child: const Row(
+            child: Row(
               children: [
                 Text(
-                  'Share',
+                  localizations.share,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 13,
@@ -294,44 +304,44 @@ class _RightActions extends StatelessWidget {
             ),
           ),
           itemBuilder: (context) => [
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'copy_link',
               child: Row(
                 children: [
                   Icon(Icons.link, size: 16),
                   SizedBox(width: 8),
-                  Text('Copy link'),
+                  Text(localizations.copyLink),
                 ],
               ),
             ),
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'invite',
               child: Row(
                 children: [
                   Icon(Icons.person_add, size: 16),
                   SizedBox(width: 8),
-                  Text('Invite collaborators'),
+                  Text(localizations.inviteCollaborators),
                 ],
               ),
             ),
             const PopupMenuDivider(),
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'publish',
               child: Row(
                 children: [
                   Icon(Icons.public, size: 16),
                   SizedBox(width: 8),
-                  Text('Publish to web'),
+                  Text(localizations.publishToWeb),
                 ],
               ),
             ),
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'export',
               child: Row(
                 children: [
                   Icon(Icons.download, size: 16),
                   SizedBox(width: 8),
-                  Text('Export'),
+                  Text(localizations.export),
                 ],
               ),
             ),
@@ -339,6 +349,9 @@ class _RightActions extends StatelessWidget {
         ),
 
         const SizedBox(width: 12),
+
+        // Language selector
+        const CompactLanguageSelector(iconColor: Colors.grey),
 
         // User profile menu
         PopupMenuButton<String>(
@@ -372,44 +385,44 @@ class _RightActions extends StatelessWidget {
             ),
           ),
           itemBuilder: (context) => [
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'profile',
               child: Row(
                 children: [
                   Icon(Icons.person, size: 16),
                   SizedBox(width: 8),
-                  Text('Profile'),
+                  Text(localizations.profile),
                 ],
               ),
             ),
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'settings',
               child: Row(
                 children: [
                   Icon(Icons.settings, size: 16),
                   SizedBox(width: 8),
-                  Text('Settings'),
+                  Text(localizations.settings),
                 ],
               ),
             ),
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'help',
               child: Row(
                 children: [
                   Icon(Icons.help, size: 16),
                   SizedBox(width: 8),
-                  Text('Help'),
+                  Text(localizations.help),
                 ],
               ),
             ),
             const PopupMenuDivider(),
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'logout',
               child: Row(
                 children: [
                   Icon(Icons.logout, size: 16),
                   SizedBox(width: 8),
-                  Text('Logout'),
+                  Text(localizations.logout),
                 ],
               ),
             ),

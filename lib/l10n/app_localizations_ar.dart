@@ -169,4 +169,195 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get format => 'التنسيق';
+
+  @override
+  String get untitled => 'بدون عنوان';
+
+  @override
+  String get renameProject => 'إعادة تسمية المشروع';
+
+  @override
+  String get projectName => 'اسم المشروع';
+
+  @override
+  String get copyLink => 'نسخ الرابط';
+
+  @override
+  String get inviteCollaborators => 'دعوة المتعاونين';
+
+  @override
+  String get publishToWeb => 'نشر على الويب';
+
+  @override
+  String get profile => 'الملف الشخصي';
+
+  @override
+  String get help => 'مساعدة';
+
+  @override
+  String get logout => 'تسجيل الخروج';
+
+  @override
+  String get searchAllLibraries => 'البحث في جميع المكتبات';
+
+  @override
+  String get allLibraries => 'جميع المكتبات';
+
+  @override
+  String get uiKits => 'مجموعات واجهة المستخدم';
+
+  @override
+  String get filterLibraries => 'تصفية المكتبات';
+
+  @override
+  String get showUIKits => 'إظهار مجموعات واجهة المستخدم';
+
+  @override
+  String get showComponents => 'إظهار المكونات';
+
+  @override
+  String get showIcons => 'إظهار الأيقونات';
+
+  @override
+  String get applyFilters => 'تطبيق المرشحات';
+
+  @override
+  String noLibrariesFound(Object query) {
+    return 'لم يتم العثور على مكتبات لـ \"$query\"';
+  }
+
+  @override
+  String get openLibrary => 'فتح المكتبة';
+
+  @override
+  String get viewDetails => 'عرض التفاصيل';
+
+  @override
+  String get open => 'فتح';
+
+  @override
+  String get addToFavorites => 'إضافة إلى المفضلة';
+
+  @override
+  String get remove => 'إزالة';
+
+  @override
+  String get importAssets => 'استيراد الأصول';
+
+  @override
+  String get page => 'الصفحة';
+
+  @override
+  String get background => 'الخلفية';
+
+  @override
+  String get showInExports => 'إظهار في التصديرات';
+
+  @override
+  String get clipContent => 'قص المحتوى';
+
+  @override
+  String get noExportSettings => 'لا توجد إعدادات تصدير';
+
+  @override
+  String get preview => 'معاينة';
+
+  @override
+  String get selectFrameToAddInteractions => 'حدد إطارًا لإضافة تفاعلات';
+
+  @override
+  String get cancel => 'إلغاء';
+
+  @override
+  String get apply => 'تطبيق';
+
+  @override
+  String get editText => 'تحرير النص';
+
+  @override
+  String get enterText => 'أدخل النص...';
+
+  @override
+  String get doubleClickToEdit => 'انقر مرتين للتحرير';
+
+  @override
+  String get zoomToFit => 'تكبير للمناسب';
+
+  @override
+  String get lock => 'قفل';
+
+  @override
+  String get unlock => 'إلغاء القفل';
+
+  @override
+  String get hide => 'إخفاء';
+
+  @override
+  String get show => 'إظهار';
+
+  @override
+  String get backgroundColor => 'لون الخلفية';
+
+  @override
+  String get colorPickerHere => 'منتقي الألوان سيكون هنا';
+
+  @override
+  String get english => 'الإنجليزية';
+
+  @override
+  String get french => 'الفرنسية';
+
+  @override
+  String get arabic => 'العربية';
+
+  @override
+  String get selectLanguage => 'اختر اللغة';
+
+  @override
+  String get selectElementToEdit => 'اختر عنصراً لتحرير خصائصه';
+
+  @override
+  String get element => 'عنصر';
+
+  @override
+  String get positionAndSize => 'الموضع والحجم';
+
+  @override
+  String get appearance => 'المظهر';
+
+  @override
+  String get deleteElement => 'حذف العنصر';
+
+  @override
+  String get fillType => 'نوع التعبئة';
+
+  @override
+  String get solidColor => 'لون صلب';
+
+  @override
+  String get gradient => 'تدرج';
+
+  @override
+  String get image => 'صورة';
+
+  @override
+  String get gradientPicker => 'منتقي التدرج';
+
+  @override
+  String get linearGradient => 'تدرج خطي';
+
+  @override
+  String get radialGradient => 'تدرج شعاعي';
+
+  @override
+  String get sunsetGradient => 'تدرج الغروب';
+
+  @override
+  String get project => 'مشروع';
+
+  @override
+  String get menu => 'القائمة';
+
+  @override
+  String get y => 'ص';
 }

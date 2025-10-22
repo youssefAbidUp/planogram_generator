@@ -1,6 +1,7 @@
 // lib/widgets/node_properties_panel.dart
 // Properties panel for selected nodes - COMPLETE VERSION
 
+import 'package:figma_editor/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -18,9 +19,9 @@ class NodePropertiesPanel extends StatelessWidget {
         final selectedNode = appState.selectedNode;
 
         if (selectedNode == null) {
-          return const EmptyState(
+          return EmptyState(
             icon: Icons.ads_click,
-            message: 'Select an element to edit properties',
+            message: AppLocalizations.of(context)!.selectElementToEdit,
           );
         }
 
@@ -29,7 +30,7 @@ class NodePropertiesPanel extends StatelessWidget {
             children: [
               // Node info section
               CollapsibleSection(
-                title: 'Element',
+                title: AppLocalizations.of(context)!.element,
                 isExpanded: true,
                 onToggle: () {},
                 children: [
@@ -43,7 +44,7 @@ class NodePropertiesPanel extends StatelessWidget {
 
               // Position & Size
               CollapsibleSection(
-                title: 'Position & Size',
+                title: AppLocalizations.of(context)!.positionAndSize,
                 isExpanded: true,
                 onToggle: () {},
                 children: [
@@ -59,7 +60,7 @@ class NodePropertiesPanel extends StatelessWidget {
               if (selectedNode is RectangleNode ||
                   selectedNode is EllipseNode) ...[
                 CollapsibleSection(
-                  title: 'Appearance',
+                  title: AppLocalizations.of(context)!.appearance,
                   isExpanded: true,
                   onToggle: () {},
                   children: [
@@ -74,7 +75,7 @@ class NodePropertiesPanel extends StatelessWidget {
               // Corner Radius (for rectangles)
               if (selectedNode is RectangleNode) ...[
                 CollapsibleSection(
-                  title: 'Corner Radius',
+                  title: AppLocalizations.of(context)!.cornerRadius,
                   isExpanded: true,
                   onToggle: () {},
                   children: [
@@ -90,7 +91,7 @@ class NodePropertiesPanel extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(12),
                 child: CustomButton(
-                  label: 'Delete Element',
+                  label: AppLocalizations.of(context)!.deleteElement,
                   onPressed: () {
                     Provider.of<AppState>(
                       context,
@@ -364,12 +365,12 @@ class _AppearanceSection extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Fill Type'),
+        title: Text(AppLocalizations.of(context)!.fillType),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             ListTile(
-              title: const Text('Solid Color'),
+              title: Text(AppLocalizations.of(context)!.solidColor),
               leading: Radio<FillType>(
                 value: FillType.solid,
                 groupValue: currentType,
@@ -383,7 +384,7 @@ class _AppearanceSection extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: const Text('Gradient'),
+              title: Text(AppLocalizations.of(context)!.gradient),
               leading: Radio<FillType>(
                 value: FillType.gradient,
                 groupValue: currentType,
@@ -397,7 +398,7 @@ class _AppearanceSection extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: const Text('Image'),
+              title: Text(AppLocalizations.of(context)!.image),
               leading: Radio<FillType>(
                 value: FillType.image,
                 groupValue: currentType,
@@ -420,12 +421,12 @@ class _AppearanceSection extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Gradient Picker'),
+        title: Text(AppLocalizations.of(context)!.gradientPicker),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             ListTile(
-              title: const Text('Linear Gradient'),
+              title: Text(AppLocalizations.of(context)!.linearGradient),
               subtitle: Container(
                 height: 40,
                 decoration: BoxDecoration(
@@ -447,7 +448,7 @@ class _AppearanceSection extends StatelessWidget {
               },
             ),
             ListTile(
-              title: const Text('Radial Gradient'),
+              title: Text(AppLocalizations.of(context)!.radialGradient),
               subtitle: Container(
                 height: 40,
                 decoration: BoxDecoration(
@@ -469,7 +470,7 @@ class _AppearanceSection extends StatelessWidget {
               },
             ),
             ListTile(
-              title: const Text('Sunset Gradient'),
+              title: Text(AppLocalizations.of(context)!.sunsetGradient),
               subtitle: Container(
                 height: 40,
                 decoration: BoxDecoration(
